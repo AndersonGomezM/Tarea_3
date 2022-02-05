@@ -1,0 +1,26 @@
+﻿<Window x:Class="Ejercicio6_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio6_1"
+        mc:Ignorable="d"
+        Title="Promedio" Height="300" Width="400" >
+    <Grid>
+
+        <StackPanel Margin="10" Orientation="Vertical" >
+            <TextBlock Text="Calculadora de promedio 10" FontSize="20" />
+            
+            <StackPanel Orientation="Horizontal" >
+                
+            </StackPanel>
+
+            <!-- BOTONES -->
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="Ca" />
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
