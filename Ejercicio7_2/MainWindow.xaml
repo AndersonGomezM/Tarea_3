@@ -5,14 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ejercicio7_2"
         mc:Ignorable="d"
-        Title="Diccionario" Height="300" Width="400" >
+        Title="Diccionario" Height="450" Width="400" >
     <Grid>
 
         <StackPanel Margin="10" Orientation="Vertical" >
             <TextBlock Text="Diccionario" FontSize="20" />
             
-            <StackPanel>
-                
+            <StackPanel Margin="10" Orientation="Horizontal" >
+                <TextBlock Text="Palabra" FontSize="16" />
+                <TextBox x:Name="PalabraTextBox" Margin="5" Text="" Height="20" Width="60" />
+            </StackPanel>
+
+            <StackPanel Margin="10" Orientation="Vertical" >
+                <TextBlock Text="Descripción" FontSize="14" />
+                <TextBox x:Name="DescripcionTextBox" AcceptsReturn="True" TextWrapping="Wrap" 
+                        Text="" MaxHeight="150" MaxWidth="298" Height="100" Width="300"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" />
+            </StackPanel>
+
+            <!-- BOTONES -->
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="GuardarButton" Margin="5" Content="💾 Guardar" Click="GuardarButton_Click" />
+                <Button x:Name="BuscarButton" Margin="5" Content="🔎 Buscar" Click="BuscarButton_Click" />
+            </StackPanel>
+
+            <!-- Resutaldo de busqueda -->
+            <StackPanel Margin="10" HorizontalAlignment="Center" >
+                <TextBox x:Name="ResultadoTextBox" Text="" AcceptsReturn="True" TextWrapping="Wrap"
+                        MaxHeight="150" MaxWidth="298" Height="100" Width="300"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto" />
             </StackPanel>
 
         </StackPanel>

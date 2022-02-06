@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,30 @@ namespace Ejercicio7_2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        Hashtable tabla = new Hashtable();
+
+        private void GuardarButton_Click(Object sender, RoutedEventArgs e)
+        {
+            tabla.Add(PalabraTextBox.Text, DescripcionTextBox.Text);
+
+            if(tabla.Contains(PalabraTextBox.Text))
+                MessageBox.Show("El registro se a guardado.");
+            else
+                MessageBox.Show("El registro no se a guardado.");
+        }
+
+        private void BuscarButton_Click(Object sender, RoutedEventArgs e)
+        {
+            if(tabla.Contains(PalabraTextBox.Text))
+            {
+                ResultadoTextBox.Text = PalabraTextBox.Text + ": " + tabla[PalabraTextBox.Text];
+            }
+            else
+            {
+                MessageBox.Show("Este registro no existe.");
+            }
         }
     }
 }

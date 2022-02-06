@@ -5,15 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ejercicio7_1"
         mc:Ignorable="d"
-        Title="Caculador de promedio" Height="300" Width="400" >
+        Title="Caculador de promedio" Height="400" Width="400" >
     <Grid>
 
         <StackPanel Margin="10" Orientation="Vertical" >
-            <TextBlock Text="Calcula el promedio de notas e identifica" FontSize="20" />
+            <TextBlock Text="Calcula el promedio de notas" FontSize="20" />
             <TextBlock Text="el mayor y la menor nota" FontSize="20" />
-            
-            <StackPanel>
-                
+
+            <StackPanel Orientation="Horizontal" Margin="10" >
+                <TextBlock Text="Total nota del estudiante " FontSize="16" />
+                <TextBlock x:Name="NumeroEstudiante" Text="1" FontSize="16" />
+                <TextBox x:Name="NotaTextBox" Margin="5" Text="" Height="20" Width="80" />
+            </StackPanel>
+
+            <!-- BOTONES -->
+            <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="GuardarButton" Margin="5" Content="💾 Guardar" Click="GuardarButton_Click" />
+                <Button x:Name="LimpiarButton" Margin="5" Content="♻ Limpiar" Click="LimpiarButton_Click" />
+                <Button x:Name="CalcularButton" Margin="5" Content="Calcular" Click="CalcularButton_Click" />
+            </StackPanel>
+
+            <!-- RESULTADOS -->
+            <StackPanel Orientation="Horizontal" Margin="5" >
+                <TextBlock Text="Nota Mayor:" FontSize="14" />
+                <TextBox x:Name="NotaMayorTextBox" Margin="5" Text="" Height="20" Width="60" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" >
+                <TextBlock Text="Nota Menor:" FontSize="14" />
+                <TextBox x:Name="NotaMenorTextBox" Margin="5" Text="" Height="20" Width="60" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" >
+                <TextBlock Text="Promedio:" FontSize="14" />
+                <TextBox x:Name="PromedioTextBox" Margin="5" Text="" Height="20" Width="60" />
             </StackPanel>
 
         </StackPanel>

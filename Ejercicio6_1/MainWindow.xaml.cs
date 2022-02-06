@@ -27,6 +27,9 @@ namespace Ejercicio6_1
             InitializeComponent();
         }
 
-        
+        public static void CalcularButton_Click(Object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -11,13 +11,25 @@
         <StackPanel Margin="10" Orientation="Vertical" >
             <TextBlock Text="Agenda telefónica" FontSize="20" />
             
-            <StackPanel>
-                
+            <StackPanel Margin="10" >
+                <TextBlock Text="Nombre" FontSize="14" />
+                <TextBox x:Name="NombreTextBox" Text="" Height="20" />
+            </StackPanel>
+
+            <StackPanel Margin="5" >
+                <TextBlock Text="Número" FontSize="14" />
+                <TextBox x:Name="NumeroTextBox" Text="" Height="20" />
             </StackPanel>
 
             <!-- BOTONES -->
             <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Button x:Name="Ca" />
+                <Button x:Name="GuardarButton" Margin="5" Content="💾 Guardar" Click="GuardarButton_Click" />
+                <Button x:Name="BuscarButton" Margin="5" Content="🔎 Buscar" Click="BuscarButton_Click" />
+            </StackPanel>
+
+            <!-- Resutaldo de busqueda -->
+            <StackPanel Margin="10" HorizontalAlignment="Center" >
+                <TextBox x:Name="ResultadoTextBox" Text="" Height="40" Width="200" />
             </StackPanel>
 
         </StackPanel>
